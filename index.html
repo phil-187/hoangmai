@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Madame Pho</title>
+
+  <!-- CSS Style sheets -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+
+<body>
+
+  <div class="row">
+    <div class="col-6">
+      <h1>Madame Pho</h1>
+    </div>
+    <div class="col-6 right-col">
+      <button onclick="removeAll()" type="button" class="btn btn-danger reset-btn">Alles löschen</button>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Alles zurücksetzen --->
+
+  <div class="headerTotal">
+
+
+    <!-- Berechnung -->
+
+    <div class="row header-row">
+      <div class="col-6">
+        <p class="total-item">Gesamtsumme:</p>
+      </div>
+      <div class="col-6 right-col">
+        <p class="total-price" id="Gesamtsumme">0 €</p>
+      </div>
+    </div>
+    <div class="row header-row">
+      <div class="col-6">
+        <p class="total-item">Anzahl Gerichte:</p>
+      </div>
+      <div class="col-6 right-col">
+        <p class="total-price" id="Anzahl">0</p>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Menüliste -->
+
+
+  <h1 class="category">Vorspeisen</h1>
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Goi Cuon | 4,90
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="removeItem(4.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="addItem(4.90)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Gia Gio | 4,90
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="removeItem(4.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="addItem(4.90)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Tom Chien Xu | 5,90
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="removeItem(5.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="addItem(5.90)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Edamame | 3,90
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="removeItem(3.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="addItem(3.90)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+  <h1 class="category">Hauptspeisen</h1>
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Pho | 9.50
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="removeItem(9.50)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="addItem(9.50)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Pho Jumbo | 11.50
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="removeItem(11.50)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="addItem(11.50)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Bun | 9.50
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="removeItem(9.50)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="addItem(9.50)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Bun Garnelen | 12
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="removeItem(12)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="addItem(12)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+  <h1 class="category">Drinks</h1>
+
+
+
+
+
+
+
+  <!-- JS Berechnung-->
+  <script type="text/javascript">
+    //Variablen //
+    var sum = 0;
+    var price = 0;
+    var numberOfItems = 0;
+
+    function addItem(price) {
+      sum = sum + price;
+      numberOfItems = numberOfItems + 1;
+      document.getElementById("Gesamtsumme").innerHTML = sum;
+      document.getElementById("Anzahl").innerHTML = numberOfItems;
+    }
+
+    function removeItem(price) {
+      sum = sum - price;
+      numberOfItems = numberOfItems - 1;
+      document.getElementById("Gesamtsumme").innerHTML = sum;
+      document.getElementById("Anzahl").innerHTML = numberOfItems;
+    }
+
+    function removeAll() {
+      sum = 0;
+      numberOfItems = 0;
+      document.getElementById("Gesamtsumme").innerHTML = sum;
+      document.getElementById("Anzahl").innerHTML = numberOfItems;
+    }
+
+
+    document.getElementById("Gesamtsumme").innerHTML = sum;
+    document.getElementById("Anzahl").innerHTML = numberOfItems;
+  </script>
+
+
+</body>
+
+</html>
