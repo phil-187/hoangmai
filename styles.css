@@ -3,72 +3,28 @@ body {
   color: white;
 }
 
-
-.title-image {
-  padding: 10px 30px;
-}
-
 h1 {
   font-size: 4.5rem;
   font-weight:bold;
   padding: 2%;
 }
 
-.total-count {
-  font-size: 3rem;
-  margin: 0;
-  font-weight: bold;
-  color: #666;
+
+.title-image {
+  padding: 10px 30px;
 }
 
-.add-item {
-  font-size: 5rem;
-  padding: 0 30px;
-
-}
-.reduce-item {
-  font-size: 5rem;
-  padding: 0 30px;
-  z-index: 99;
-}
-
-.category {
-  text-align: center;
-}
-.subcategory {
-  text-align: center;
-  font-size: 3.5rem;
-  padding: 2%;
-}
-.reset-btn {
-  margin-left: 2%;
-  margin-top: 1%;
-  font-size:4rem;
-}
-
-.reset-column {
-  background-color: #660000;
-  color: white;
-}
-
-.reset-text {
-  font-size: 3.2rem;
-  margin: 2%;
-}
-
-.total-item{
-  font-size: 4rem;
-  font-weight: bold;
-}
-.total-price {
-  font-size: 4rem;
-  margin: 0;
-  font-weight: bold;
-}
 
 .header-row {
   padding: 0 2%;
 }
+
+.split-bill{
+  font-size: 4rem;
+  padding:1% 2%;
+}
+
+
 
 .headerTotal {
   background-color: white;
@@ -78,8 +34,59 @@ h1 {
   z-index: 100;
   padding-bottom: 0;
 }
+
+
+.total-count {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  color: #666;
+}
+
+
+.reset-column {
+  background-color: #660000;
+  color: white;
+  font-size: 3.2rem;
+  padding-right: 5%;
+  padding-top: 1%;
+}
+
+
+.grand-total {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+
+.category {
+  text-align: center;
+  background-color: #660000;
+  border-width: 1px;
+  border-style:solid;
+  border-color: white;
+}
+.subcategory {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 2%;
+  background-color: #8F3737;
+  border-width: 1px;
+  border-style:solid;
+  border-color: white;
+}
+
+
+/* Auflistung*/
+
 .menu-item {
   font-size: 4rem;
+}
+
+.item-description{
+  font-size: 3rem;
+  font-style: italic;
+
 }
 
 .item-count {
@@ -95,14 +102,31 @@ color: black;
 
 }
 
-.right-col {
-  text-align: right;
-}
 
-.total {
-  text-align: right;
-}
+/* Buttons */
+
+
 
 .add-item {
-  margin-left: 10%;
+  font-size: 5rem;
+  padding: 0 30px;
+  background-color: #0A5605;
+  border-radius: 3%;
+  margin-left: 10px;
+}
+
+.reduce-item {
+  font-size: 5rem;
+  padding: 0 30px;
+  z-index: 99;
+  margin-right: 10px;
+}
+
+.add-person-dropdown {
+  font-size: 5rem;
+}
+
+
+.right-col {
+  text-align: right;
 }
