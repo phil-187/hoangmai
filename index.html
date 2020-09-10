@@ -16,10 +16,10 @@
 
   <div class="row">
     <div class="col-6">
-      <h1>Madame Pho</h1>
+      <img class="title-image" src="MP_logo.jpg" alt="MP_logo">
     </div>
     <div  onclick="removeAll()" class="col-6 right-col reset-column">
-      <p class=reset-text >Alles löschen</p>
+      <p class=reset-text >Neue Berechnung</p>
   <!--    <button onclick="removeAll()" type="button" class="btn btn-danger reset-btn">Alles löschen</button>-->
     </div>
   </div>
@@ -36,22 +36,16 @@
     <!-- Berechnung -->
 
     <div class="row header-row">
-      <div class="col-6">
-        <p class="total-item">Gesamtsumme:</p>
+      <div class="col-8">
+        <span class="total-item">Gesamtsumme </span>
+        <span class= "total-count">(</span>
+        <span class= "total-count" id="Anzahl">0</span>
+        <span class= "total-count">)</span>
       </div>
-      <div class="col-6 right-col">
+      <div class="col-4 right-col">
         <p class="total-price" id="sum">0 €</p>
       </div>
-    </div>
-    <div class="row header-row">
-      <div class="col-6">
-        <p class="total-item">Anzahl Gerichte:</p>
       </div>
-      <div class="col-6 right-col">
-        <p class="total-price" id="Anzahl">0</p>
-      </div>
-    </div>
-
   </div>
 
 
@@ -181,7 +175,206 @@
     </div>
   </div>
 
+
+
+
+
   <h1 class="category">Drinks</h1>
+  <h1 class="subcategory">Viet. Kaltgetränke</h2>
+
+    <div class="row item-row">
+      <div class="col-8">
+        <h3 class="menu-item">
+          Viet. Kaffee, Limo, Bier | 3.90
+          </p>
+      </div>
+      <div class="col-4 right-col">
+        <button onclick="reduceCount(21, 3.90)" type="button" class="btn btn-danger reduce-item">-</button>
+        <span class="item-count" id="coff_beer_lemon_count">0</span>
+        <button onclick="addItem(3.90); countItem(21)" type="button" class="btn btn-success add-item">+</button>
+      </div>
+    </div>
+
+
+    <div class="row item-row">
+      <div class="col-8">
+        <h3 class="menu-item">
+          Viet. Limo Lychee  | 4
+          </p>
+      </div>
+      <div class="col-4 right-col">
+        <button onclick="reduceCount(22, 4)" type="button" class="btn btn-danger reduce-item">-</button>
+        <span class="item-count" id="lemonade_special_count">0</span>
+        <button onclick="addItem(4); countItem(22)" type="button" class="btn btn-success add-item">+</button>
+      </div>
+    </div>
+
+    <h1 class="subcategory">Softdrinks</h2>
+
+
+    <div class="row item-row">
+      <div class="col-8">
+        <h3 class="menu-item">
+          Cola / Cola Zero | 3.50
+          </p>
+      </div>
+      <div class="col-4 right-col">
+        <button onclick="reduceCount(23, 3.50)" type="button" class="btn btn-danger reduce-item">-</button>
+        <span class="item-count" id="softdrink_count">0</span>
+        <button onclick="addItem(3.50); countItem(23)" type="button" class="btn btn-success add-item">+</button>
+      </div>
+    </div>
+
+    <div class="row item-row">
+      <div class="col-8">
+        <h3 class="menu-item">
+          Wasser (0.33) | 3.00
+          </p>
+      </div>
+      <div class="col-4 right-col">
+        <button onclick="reduceCount(24, 3)" type="button" class="btn btn-danger reduce-item">-</button>
+        <span class="item-count" id="water_sm_count">0</span>
+        <button onclick="addItem(3); countItem(24)" type="button" class="btn btn-success add-item">+</button>
+      </div>
+    </div>
+
+    <div class="row item-row">
+      <div class="col-8">
+        <h3 class="menu-item">
+          Wasser (0.75) | 6.90
+          </p>
+      </div>
+      <div class="col-4 right-col">
+        <button onclick="reduceCount(25, 6.90)" type="button" class="btn btn-danger reduce-item">-</button>
+        <span class="item-count" id="water_lg_count">0</span>
+        <button onclick="addItem(6.90); countItem(25)" type="button" class="btn btn-success add-item">+</button>
+      </div>
+    </div>
+
+
+<h1 class="subcategory">Specials</h2>
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Longdrinks | 8.90
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="reduceCount(26, 8.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="longdrink_reg_count">0</span>
+      <button onclick="addItem(8.90); countItem(26)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Lillet / Aperol / Hugo | 5.90
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="reduceCount(27, 5.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="longdrink_sm_count">0</span>
+      <button onclick="addItem(5.90); countItem(27)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+<h1 class="subcategory">Wein / Prosecco</h2>
+  <div class="row item-row">
+    <div class="col-8">
+      <h3 class="menu-item">
+        Wein / Prosecco (Glas) | 6.90
+        </p>
+    </div>
+    <div class="col-4 right-col">
+      <button onclick="reduceCount(29, 6.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="wine_2_count">0</span>
+      <button onclick="addItem(6.90); countItem(29)" type="button" class="btn btn-success add-item">+</button>
+    </div>
+  </div>
+
+
+    <div class="row item-row">
+      <div class="col-8">
+        <h3 class="menu-item">
+          Weinschorle (0.2) | 5.90
+          </p>
+      </div>
+      <div class="col-4 right-col">
+        <button onclick="reduceCount(28, 5.90)" type="button" class="btn btn-danger reduce-item">-</button>
+        <span class="item-count" id="wine_1_count">0</span>
+        <button onclick="addItem(5.90); countItem(28)" type="button" class="btn btn-success add-item">+</button>
+      </div>
+    </div>
+
+  <h1 class="subcategory">Flaschen</h2>
+
+
+      <div class="row item-row">
+        <div class="col-8">
+          <h3 class="menu-item">
+            Wein/Prosecco (Flasche) | 26.00
+            </p>
+        </div>
+        <div class="col-4 right-col">
+          <button onclick="reduceCount(30, 26)" type="button" class="btn btn-danger reduce-item">-</button>
+          <span class="item-count" id="wine_bottle_count">0</span>
+          <button onclick="addItem(26); countItem(30)" type="button" class="btn btn-success add-item">+</button>
+        </div>
+      </div>
+
+        <div class="row item-row">
+          <div class="col-8">
+            <h3 class="menu-item">
+              Moet & Chandon Rose (Flasche) | 79.00
+              </p>
+          </div>
+          <div class="col-4 right-col">
+            <button onclick="reduceCount(31, 79)" type="button" class="btn btn-danger reduce-item">-</button>
+            <span class="item-count" id="rose_bottle_count">0</span>
+            <button onclick="addItem(79); countItem(31)" type="button" class="btn btn-success add-item">+</button>
+          </div>
+        </div>
+
+        <div class="row item-row">
+          <div class="col-8">
+            <h3 class="menu-item">
+              Moet & Chandon Ice (Flasche) | 89.00
+              </p>
+          </div>
+          <div class="col-4 right-col">
+            <button onclick="reduceCount(32, 89)" type="button" class="btn btn-danger reduce-item">-</button>
+            <span class="item-count" id="ice_bottle_count">0</span>
+            <button onclick="addItem(89); countItem(32)" type="button" class="btn btn-success add-item">+</button>
+          </div>
+        </div>
+
+        <div class="row item-row">
+          <div class="col-8">
+            <h3 class="menu-item">
+              Belvedere (Flasche) | 99.00
+              </p>
+          </div>
+          <div class="col-4 right-col">
+            <button onclick="reduceCount(33, 99)" type="button" class="btn btn-danger reduce-item">-</button>
+            <span class="item-count" id="belvedere_bottle_count">0</span>
+            <button onclick="addItem(99); countItem(33)" type="button" class="btn btn-success add-item">+</button>
+          </div>
+        </div>
+
+        <div class="row item-row">
+          <div class="col-8">
+            <h3 class="menu-item">
+              Gin Tanqueray (Flasche) | 110.00
+              </p>
+          </div>
+          <div class="col-4 right-col">
+            <button onclick="reduceCount(34, 110)" type="button" class="btn btn-danger reduce-item">-</button>
+            <span class="item-count" id="tanqueray_bottle_count">0</span>
+            <button onclick="addItem(110); countItem(34)" type="button" class="btn btn-success add-item">+</button>
+          </div>
+        </div>
 
 
 
@@ -208,6 +401,25 @@
     var bun_reg_count = 0; //7
     var bun_shrimp_count = 0; //8
 
+    var coff_beer_lemon_count = 0; //21 3.90
+    var lemonade_special_count = 0; //22 4.00
+    var softdrink_count = 0; //23 3.50
+    var water_sm_count = 0; //24 3.00
+    var water_lg_count = 0; //25 6.90
+
+    var longdrink_reg_count = 0; //26 8.90
+    var longdrink_sm_count = 0; //27 5.90
+
+    var wine_1_count = 0; // 28 5.90
+    var wine_2_count = 0; // 29 6.90
+
+    var wine_bottle_count = 0; // 30 26
+    var rose_bottle_count = 0; // 31 79
+    var ice_bottle_count = 0; // 32 89
+
+    var belvedere_bottle_count = 0; // 33 99.00
+    var tanqueray_bottle_count = 0; // 34 110.00
+
 
 
 
@@ -231,6 +443,25 @@
       bun_reg_count = 0; //7
       bun_shrimp_count = 0; //8
 
+          coff_beer_lemon_count = 0; //21 3.90
+          lemonade_special_count = 0; //22 4.00
+          softdrink_count = 0; //23 3.50
+          water_sm_count = 0; //24 3.00
+          water_lg_count = 0; //25 6.90
+
+          longdrink_reg_count = 0; //26 8.90
+          longdrink_sm_count = 0; //27 5.90
+
+          wine_1_count = 0; // 28 5.90
+          wine_2_count = 0; // 29 6.90
+
+          wine_bottle_count = 0; // 30 26
+          rose_bottle_count = 0; // 31 79
+          ice_bottle_count = 0; // 32 89
+
+          belvedere_bottle_count = 0; // 33 99.00
+          tanqueray_bottle_count = 0; // 34 110.00
+
       document.getElementById("summerrolls_count").innerHTML = summerrolls_count;
       document.getElementById("summerrolls_count").style.color = "black";
 
@@ -253,6 +484,50 @@
 
       document.getElementById("bun_shrimp_count").innerHTML = bun_shrimp_count;
       document.getElementById("bun_shrimp_count").style.color = "black";
+
+
+      document.getElementById("coff_beer_lemon_count").innerHTML = coff_beer_lemon_count;
+      document.getElementById("coff_beer_lemon_count").style.color = "black";
+
+      document.getElementById("lemonade_special_count").innerHTML = lemonade_special_count;
+      document.getElementById("lemonade_special_count").style.color = "black";
+
+      document.getElementById("softdrink_count").innerHTML = softdrink_count;
+      document.getElementById("softdrink_count").style.color = "black";
+
+      document.getElementById("water_sm_count").innerHTML = water_sm_count;
+      document.getElementById("water_sm_count").style.color = "black";
+
+      document.getElementById("water_lg_count").innerHTML = water_lg_count;
+      document.getElementById("water_lg_count").style.color = "black";
+
+      document.getElementById("longdrink_reg_count").innerHTML = longdrink_reg_count;
+      document.getElementById("longdrink_reg_count").style.color = "black";
+
+      document.getElementById("longdrink_sm_count").innerHTML = longdrink_sm_count;
+      document.getElementById("longdrink_sm_count").style.color = "black";
+
+      document.getElementById("wine_1_count").innerHTML = wine_1_count;
+      document.getElementById("wine_1_count").style.color = "black";
+
+      document.getElementById("wine_2_count").innerHTML = wine_2_count;
+      document.getElementById("wine_2_count").style.color = "black";
+
+      document.getElementById("wine_bottle_count").innerHTML = wine_bottle_count;
+      document.getElementById("wine_bottle_count").style.color = "black";
+
+      document.getElementById("rose_bottle_count").innerHTML = rose_bottle_count;
+      document.getElementById("rose_bottle_count").style.color = "black";
+
+      document.getElementById("ice_bottle_count").innerHTML = ice_bottle_count;
+      document.getElementById("ice_bottle_count").style.color = "black";
+
+      document.getElementById("belvedere_bottle_count").innerHTML = belvedere_bottle_count;
+      document.getElementById("belvedere_bottle_count").style.color = "black";
+
+      document.getElementById("tanqueray_bottle_count").innerHTML = tanqueray_bottle_count;
+      document.getElementById("tanqueray_bottle_count").style.color = "black";
+
 
       document.getElementById("sum").innerHTML = sum;
       document.getElementById("Anzahl").innerHTML = numberOfItems;
@@ -294,10 +569,86 @@
         bun_shrimp_count++;
         document.getElementById("bun_shrimp_count").innerHTML = bun_shrimp_count;
         document.getElementById("bun_shrimp_count").style.color = "white";
+
+
+      } else if (selected === 21) {
+        coff_beer_lemon_count++;
+        document.getElementById("coff_beer_lemon_count").innerHTML = coff_beer_lemon_count;
+        document.getElementById("coff_beer_lemon_count").style.color = "white";
+
+      } else if (selected === 22) {
+        lemonade_special_count++;
+        document.getElementById("lemonade_special_count").innerHTML = lemonade_special_count;
+        document.getElementById("lemonade_special_count").style.color = "white";
+
+      } else if (selected === 23) {
+        softdrink_count++;
+        document.getElementById("softdrink_count").innerHTML = softdrink_count;
+        document.getElementById("softdrink_count").style.color = "white";
+
+      } else if (selected === 24) {
+        water_sm_count++;
+        document.getElementById("water_sm_count").innerHTML = water_sm_count;
+        document.getElementById("water_sm_count").style.color = "white";
+
+      } else if (selected === 25) {
+        water_lg_count++;
+        document.getElementById("water_lg_count").innerHTML = water_lg_count;
+        document.getElementById("water_lg_count").style.color = "white";
+
+
+      } else if (selected === 26) {
+        longdrink_reg_count++;
+        document.getElementById("longdrink_reg_count").innerHTML = longdrink_reg_count;
+        document.getElementById("longdrink_reg_count").style.color = "white";
+
+
+      } else if (selected === 27) {
+        longdrink_sm_count++;
+        document.getElementById("longdrink_sm_count").innerHTML = longdrink_sm_count;
+        document.getElementById("longdrink_sm_count").style.color = "white";
+
+      } else if (selected === 28) {
+        wine_1_count++;
+        document.getElementById("wine_1_count").innerHTML = wine_1_count;
+        document.getElementById("wine_1_count").style.color = "white";
+
+      } else if (selected === 29) {
+        wine_2_count++;
+        document.getElementById("wine_2_count").innerHTML = wine_2_count;
+        document.getElementById("wine_2_count").style.color = "white";
+
+
+      } else if (selected === 30) {
+        wine_bottle_count++;
+        document.getElementById("wine_bottle_count").innerHTML = wine_bottle_count;
+        document.getElementById("wine_bottle_count").style.color = "white";
+
+      } else if (selected === 31) {
+        rose_bottle_count++;
+        document.getElementById("rose_bottle_count").innerHTML = rose_bottle_count;
+        document.getElementById("rose_bottle_count").style.color = "white";
+
+      } else if (selected === 32) {
+        ice_bottle_count++;
+        document.getElementById("ice_bottle_count").innerHTML = ice_bottle_count;
+        document.getElementById("ice_bottle_count").style.color = "white";
+
+
+      } else if (selected === 33) {
+        belvedere_bottle_count++;
+        document.getElementById("belvedere_bottle_count").innerHTML = belvedere_bottle_count;
+        document.getElementById("belvedere_bottle_count").style.color = "white";
+
+      } else if (selected === 34) {
+        tanqueray_bottle_count++;
+        document.getElementById("tanqueray_bottle_count").innerHTML = tanqueray_bottle_count;
+        document.getElementById("tanqueray_bottle_count").style.color = "white";
+
       } else {
         alert("Fehler beim Hinzufügen des Artikels");
       }
-      console.log(summerrolls_count, springrolls_count, friedShrimp_count, edamame_count, pho_reg_count, pho_lg_count, bun_reg_count, bun_shrimp_count);
+      console.log(summerrolls_count, springrolls_count, friedShrimp_count, edamame_count, pho_reg_count, pho_lg_count, bun_reg_count, bun_shrimp_count, coff_beer_lemon_count, lemonade_special_count, softdrink_count, water_sm_count, water_lg_count, longdrink_reg_count, longdrink_sm_count, wine_2_count, wine_1_count, wine_bottle_count, rose_bottle_count, ice_bottle_count, belvedere_bottle_count, tanqueray_bottle_count)
     }
 
 
@@ -310,8 +661,7 @@
         summerrolls_count--;
         document.getElementById("summerrolls_count").innerHTML = summerrolls_count;
         document.getElementById("summerrolls_count").style.color = "white";
-        document.getElementById("sum").innerHTML = sum.toFixed(2);
-        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
 
       } else if (selected_reduced === 2 && springrolls_count > 0) {
         sum = sum - price;
@@ -319,8 +669,7 @@
         springrolls_count--;
         document.getElementById("springrolls_count").innerHTML = springrolls_count;
         document.getElementById("springrolls_count").style.color = "white";
-        document.getElementById("sum").innerHTML = sum.toFixed(2);
-        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
 
       } else if (selected_reduced === 3 && friedShrimp_count > 0) {
         sum = sum - price;
@@ -328,8 +677,7 @@
         friedShrimp_count--;
         document.getElementById("friedShrimp_count").innerHTML = friedShrimp_count;
         document.getElementById("friedShrimp_count").style.color = "white";
-        document.getElementById("sum").innerHTML = sum.toFixed(2);
-        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
 
       } else if (selected_reduced === 4 && edamame_count > 0) {
         sum = sum - price;
@@ -337,8 +685,7 @@
         edamame_count--;
         document.getElementById("edamame_count").innerHTML = edamame_count;
         document.getElementById("edamame_count").style.color = "white";
-        document.getElementById("sum").innerHTML = sum.toFixed(2);
-        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
 
       } else if (selected_reduced === 5 && pho_reg_count > 0) {
         sum = sum - price;
@@ -346,8 +693,6 @@
         pho_reg_count--;
         document.getElementById("pho_reg_count").innerHTML = pho_reg_count;
         document.getElementById("pho_reg_count").style.color = "white";
-        document.getElementById("sum").innerHTML = sum.toFixed(2);
-        document.getElementById("Anzahl").innerHTML = numberOfItems;
 
       } else if (selected_reduced === 6 && pho_lg_count > 0) {
         sum = sum - price;
@@ -355,8 +700,7 @@
         pho_lg_count--;
         document.getElementById("pho_lg_count").innerHTML = pho_lg_count;
         document.getElementById("pho_lg_count").style.color = "white";
-        document.getElementById("sum").innerHTML = sum.toFixed(2);
-        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
 
 
       } else if (selected_reduced === 7 && bun_reg_count > 0) {
@@ -365,8 +709,7 @@
         bun_reg_count--;
         document.getElementById("bun_reg_count").innerHTML = bun_reg_count;
         document.getElementById("bun_reg_count").style.color = "white";
-        document.getElementById("sum").innerHTML = sum.toFixed(2);
-        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
 
       } else if (selected_reduced === 8 && bun_shrimp_count > 0) {
         sum = sum - price;
@@ -374,12 +717,150 @@
         bun_shrimp_count--;
         document.getElementById("bun_shrimp_count").innerHTML = bun_shrimp_count;
         document.getElementById("bun_shrimp_count").style.color = "white";
-        document.getElementById("sum").innerHTML = sum.toFixed(2);
-        document.getElementById("Anzahl").innerHTML = numberOfItems;
-      } else {
+
+      }
+
+
+
+
+      else if (selected_reduced === 21 && coff_beer_lemon_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        coff_beer_lemon_count--;
+        document.getElementById("coff_beer_lemon_count").innerHTML = coff_beer_lemon_count;
+        document.getElementById("coff_beer_lemon_count").style.color = "white";
+
+      }
+
+
+      else if (selected_reduced === 22 && lemonade_special_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        lemonade_special_count--;
+        document.getElementById("lemonade_special_count").innerHTML = lemonade_special_count;
+        document.getElementById("lemonade_special_count").style.color = "white";
+
+      }
+
+
+
+      else if (selected_reduced === 23 && softdrink_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        softdrink_count--;
+        document.getElementById("softdrink_count").innerHTML = softdrink_count;
+        document.getElementById("softdrink_count").style.color = "white";
+
+      }
+
+      else if (selected_reduced === 24 && water_sm_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        water_sm_count--;
+        document.getElementById("water_sm_count").innerHTML = water_sm_count;
+        document.getElementById("water_sm_count").style.color = "white";
+
+      }
+
+
+      else if (selected_reduced === 25 && water_lg_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        water_lg_count--;
+        document.getElementById("water_lg_count").innerHTML = water_lg_count;
+        document.getElementById("water_lg_count").style.color = "white";
+
+      }
+
+      else if (selected_reduced === 26 && longdrink_reg_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        longdrink_reg_count--;
+        document.getElementById("longdrink_reg_count").innerHTML = longdrink_reg_count;
+        document.getElementById("longdrink_reg_count").style.color = "white";
+
+      }
+
+
+      else if (selected_reduced === 27 && longdrink_sm_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        longdrink_sm_count--;
+        document.getElementById("longdrink_sm_count").innerHTML = longdrink_sm_count;
+        document.getElementById("longdrink_sm_count").style.color = "white";
+
+      }
+
+      else if (selected_reduced === 28 && wine_1_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        wine_1_count--;
+        document.getElementById("wine_1_count").innerHTML = wine_1_count;
+        document.getElementById("wine_1_count").style.color = "white";
+
+      }
+
+      else if (selected_reduced === 29 && wine_2_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        wine_2_count--;
+        document.getElementById("wine_2_count").innerHTML = wine_2_count;
+        document.getElementById("wine_2_count").style.color = "white";
+
+      }
+
+      else if (selected_reduced === 30 && wine_bottle_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        wine_bottle_count--;
+        document.getElementById("wine_bottle_count").innerHTML = wine_bottle_count;
+        document.getElementById("wine_bottle_count").style.color = "white";
+
+      }
+
+      else if (selected_reduced === 31 && rose_bottle_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        rose_bottle_count--;
+        document.getElementById("rose_bottle_count").innerHTML = rose_bottle_count;
+        document.getElementById("rose_bottle_count").style.color = "white";
+
+      }
+
+      else if (selected_reduced === 32 && ice_bottle_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        ice_bottle_count--;
+        document.getElementById("ice_bottle_count").innerHTML = ice_bottle_count;
+        document.getElementById("ice_bottle_count").style.color = "white";
+
+      }
+
+      else if (selected_reduced === 33 && belvedere_bottle_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        belvedere_bottle_count--;
+        document.getElementById("belvedere_bottle_count").innerHTML = belvedere_bottle_count;
+        document.getElementById("belvedere_bottle_count").style.color = "white";
+
+      }
+
+      else if (selected_reduced === 34 && tanqueray_bottle_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        tanqueray_bottle_count--;
+        document.getElementById("tanqueray_bottle_count").innerHTML = tanqueray_bottle_count;
+        document.getElementById("tanqueray_bottle_count").style.color = "white";
+
+      }
+
+
+      else {
         alert("Fehler beim Entfernen des Artikels");
       }
-      console.log(summerrolls_count, springrolls_count, friedShrimp_count, edamame_count, pho_reg_count, pho_lg_count, bun_reg_count, bun_shrimp_count);
+      document.getElementById("sum").innerHTML = sum.toFixed(2);
+      document.getElementById("Anzahl").innerHTML = numberOfItems;
+    console.log(summerrolls_count, springrolls_count, friedShrimp_count, edamame_count, pho_reg_count, pho_lg_count, bun_reg_count, bun_shrimp_count, coff_beer_lemon_count, lemonade_special_count, softdrink_count, water_sm_count, water_lg_count, longdrink_reg_count, longdrink_sm_count, wine_2_count, wine_1_count, wine_bottle_count, rose_bottle_count, ice_bottle_count, belvedere_bottle_count, tanqueray_bottle_count);
     }
 
 
