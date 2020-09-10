@@ -3,10 +3,22 @@ body {
   color: white;
 }
 
+
+.title-image {
+  padding: 10px 30px;
+}
+
 h1 {
   font-size: 4.5rem;
   font-weight:bold;
   padding: 2%;
+}
+
+.total-count {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  color: #666;
 }
 
 .add-item {
@@ -23,6 +35,11 @@ h1 {
 .category {
   text-align: center;
 }
+.subcategory {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 2%;
+}
 .reset-btn {
   margin-left: 2%;
   margin-top: 1%;
@@ -30,21 +47,21 @@ h1 {
 }
 
 .reset-column {
-  background-color: red;
+  background-color: #660000;
   color: white;
 }
 
 .reset-text {
   font-size: 3.2rem;
-  margin: 2%;  
+  margin: 2%;
 }
 
 .total-item{
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 .total-price {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 0;
   font-weight: bold;
 }
