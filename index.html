@@ -18,11 +18,11 @@
     <div class="col-6">
       <h1>Madame Pho</h1>
     </div>
-    <div class="col-6 right-col">
-      <button onclick="removeAll()" type="button" class="btn btn-danger reset-btn">Alles löschen</button>
+    <div  onclick="removeAll()" class="col-6 right-col reset-column">
+      <p class=reset-text >Alles löschen</p>
+  <!--    <button onclick="removeAll()" type="button" class="btn btn-danger reset-btn">Alles löschen</button>-->
     </div>
   </div>
-
 
 
 
@@ -40,7 +40,7 @@
         <p class="total-item">Gesamtsumme:</p>
       </div>
       <div class="col-6 right-col">
-        <p class="total-price" id="Gesamtsumme">0 €</p>
+        <p class="total-price" id="sum">0 €</p>
       </div>
     </div>
     <div class="row header-row">
@@ -55,19 +55,26 @@
   </div>
 
 
+
+
   <!-- Menüliste -->
 
+  <script type="text/javascript">
+
+  </script>
 
   <h1 class="category">Vorspeisen</h1>
 
   <div class="row item-row">
-    <div onclick="addItem(4.90)" class="col-8">
+    <div class="col-8">
       <h3 class="menu-item">
         Goi Cuon | 4,90
     </div>
 
     <div class="col-4 right-col">
-      <button onclick="removeItem(4.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="reduceCount(1, 4.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="summerrolls_count">0</span>
+      <button onclick="addItem(4.90); countItem(1)" type="button" class="btn btn-success add-item">+</button>
     </div>
   </div>
 
@@ -75,85 +82,102 @@
 
 
   <div class="row item-row">
-    <div onclick="addItem(4.90)" class="col-8">
+
+    <div class="col-8">
       <h3 class="menu-item">
         Gia Gio | 4,90
         </p>
     </div>
     <div class="col-4 right-col">
-      <button onclick="removeItem(4.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="reduceCount(2, 4.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="springrolls_count">0</span>
+      <button onclick="addItem(4.90); countItem(2)" type="button" class="btn btn-success add-item">+</button>
     </div>
   </div>
 
 
 
   <div class="row item-row">
-    <div onclick="addItem(5.90)" class="col-8">
+
+    <div class="col-8">
       <h3 class="menu-item">
         Tom Chien Xu | 5,90
         </p>
     </div>
     <div class="col-4 right-col">
-      <button onclick="removeItem(5.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="reduceCount(3, 5.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="friedShrimp_count">0</span>
+      <button onclick="addItem(5.90); countItem(3)" type="button" class="btn btn-success add-item">+</button>
+
     </div>
   </div>
 
 
   <div class="row item-row">
-    <div onclick="addItem(3.90)" class="col-8">
+    <div class="col-8">
       <h3 class="menu-item">
         Edamame | 3,90
         </p>
     </div>
     <div class="col-4 right-col">
-      <button onclick="removeItem(3.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="reduceCount(4, 3.90)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="edamame_count">0</span>
+      <button onclick="addItem(3.90); countItem(4)" type="button" class="btn btn-success add-item">+</button>
     </div>
   </div>
 
   <h1 class="category">Hauptspeisen</h1>
 
   <div class="row item-row">
-    <div onclick="addItem(9.50)" class="col-8">
+    <div class="col-8">
       <h3 class="menu-item">
         Pho | 9.50
         </p>
     </div>
     <div class="col-4 right-col">
-      <button onclick="removeItem(9.50)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="reduceCount(5, 9.50)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="pho_reg_count">0</span>
+      <button onclick="addItem(9.50); countItem(5)" type="button" class="btn btn-success add-item">+</button>
     </div>
   </div>
 
   <div class="row item-row">
-    <div onclick="addItem(11.50)" class="col-8">
+    <div class="col-8">
       <h3 class="menu-item">
         Pho Jumbo | 11.50
         </p>
     </div>
     <div class="col-4 right-col">
-      <button onclick="removeItem(11.50)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="reduceCount(6, 11.50)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="pho_lg_count">0</span>
+      <button onclick="addItem(11.50); countItem(6)" type="button" class="btn btn-success add-item">+</button>
     </div>
   </div>
 
   <div class="row item-row">
-    <div onclick="addItem(9.50)" class="col-8">
+    <div class="col-8">
       <h3 class="menu-item">
         Bun | 9.50
         </p>
     </div>
     <div class="col-4 right-col">
-      <button onclick="removeItem(9.50)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="reduceCount(7, 9.50)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="bun_reg_count">0</span>
+      <button onclick="addItem(9.50); countItem(7)" type="button" class="btn btn-success add-item">+</button>
     </div>
   </div>
 
 
   <div class="row item-row">
-    <div onclick="addItem(12)" class="col-8">
+    <div class="col-8">
       <h3 class="menu-item">
         Bun Garnelen | 12
         </p>
     </div>
     <div class="col-4 right-col">
-      <button onclick="removeItem(12)" type="button" class="btn btn-danger reduce-item">-</button>
+      <button onclick="reduceCount(8, 12)" type="button" class="btn btn-danger reduce-item">-</button>
+      <span class="item-count" id="bun_shrimp_count">0</span>
+      <button onclick="addItem(12); countItem(8)" type="button" class="btn btn-success add-item">+</button>
     </div>
   </div>
 
@@ -171,31 +195,203 @@
     var sum = 0;
     var price = 0;
     var numberOfItems = 0;
+    var selected = 0;
+
+    // Item Variablen //
+
+    var summerrolls_count = 0; //1
+    var springrolls_count = 0; //2
+    var friedShrimp_count = 0; //3
+    var edamame_count = 0; //4
+    var pho_reg_count = 0; //5
+    var pho_lg_count = 0; //6
+    var bun_reg_count = 0; //7
+    var bun_shrimp_count = 0; //8
+
+
+
 
     function addItem(price) {
       sum = sum + price;
       numberOfItems = numberOfItems + 1;
-      document.getElementById("Gesamtsumme").innerHTML = sum;
+      document.getElementById("sum").innerHTML = sum.toFixed(2);
       document.getElementById("Anzahl").innerHTML = numberOfItems;
     }
 
-    function removeItem(price) {
-      sum = sum - price;
-      numberOfItems = numberOfItems - 1;
-      document.getElementById("Gesamtsumme").innerHTML = sum;
-      document.getElementById("Anzahl").innerHTML = numberOfItems;
-    }
 
     function removeAll() {
       sum = 0;
       numberOfItems = 0;
-      document.getElementById("Gesamtsumme").innerHTML = sum;
+      summerrolls_count = 0; //1
+      springrolls_count = 0; //2
+      friedShrimp_count = 0; //3
+      edamame_count = 0; //4
+      pho_reg_count = 0; //5
+      pho_lg_count = 0; //6
+      bun_reg_count = 0; //7
+      bun_shrimp_count = 0; //8
+
+      document.getElementById("summerrolls_count").innerHTML = summerrolls_count;
+      document.getElementById("summerrolls_count").style.color = "black";
+
+      document.getElementById("springrolls_count").innerHTML = springrolls_count;
+      document.getElementById("springrolls_count").style.color = "black";
+
+      document.getElementById("friedShrimp_count").innerHTML = friedShrimp_count;
+      document.getElementById("friedShrimp_count").style.color = "black";
+
+      document.getElementById("edamame_count").innerHTML = edamame_count;
+      document.getElementById("edamame_count").style.color = "black";
+
+      document.getElementById("pho_reg_count").innerHTML = pho_reg_count;
+      document.getElementById("pho_reg_count").style.color = "black";
+      document.getElementById("pho_lg_count").innerHTML = pho_lg_count;
+      document.getElementById("pho_lg_count").style.color = "black";
+
+      document.getElementById("bun_reg_count").innerHTML = bun_reg_count;
+      document.getElementById("bun_reg_count").style.color = "black";
+
+      document.getElementById("bun_shrimp_count").innerHTML = bun_shrimp_count;
+      document.getElementById("bun_shrimp_count").style.color = "black";
+
+      document.getElementById("sum").innerHTML = sum;
       document.getElementById("Anzahl").innerHTML = numberOfItems;
+
+    }
+
+    function countItem(product) {
+      selected = product;
+
+      if (selected === 1) {
+        summerrolls_count++;
+        document.getElementById("summerrolls_count").innerHTML = summerrolls_count;
+        document.getElementById("summerrolls_count").style.color = "white";
+      } else if (selected === 2) {
+        springrolls_count++;
+        document.getElementById("springrolls_count").innerHTML = springrolls_count;
+        document.getElementById("springrolls_count").style.color = "white";
+      } else if (selected === 3) {
+        friedShrimp_count++;
+        document.getElementById("friedShrimp_count").innerHTML = friedShrimp_count;
+        document.getElementById("friedShrimp_count").style.color = "white";
+      } else if (selected === 4) {
+        edamame_count++;
+        document.getElementById("edamame_count").innerHTML = edamame_count;
+        document.getElementById("edamame_count").style.color = "white";
+      } else if (selected === 5) {
+        pho_reg_count++;
+        document.getElementById("pho_reg_count").innerHTML = pho_reg_count;
+        document.getElementById("pho_reg_count").style.color = "white";
+      } else if (selected === 6) {
+        pho_lg_count++;
+        document.getElementById("pho_lg_count").innerHTML = pho_lg_count;
+        document.getElementById("pho_lg_count").style.color = "white";
+      } else if (selected === 7) {
+        bun_reg_count++;
+        document.getElementById("bun_reg_count").innerHTML = bun_reg_count;
+        document.getElementById("bun_reg_count").style.color = "white";
+      } else if (selected === 8) {
+        bun_shrimp_count++;
+        document.getElementById("bun_shrimp_count").innerHTML = bun_shrimp_count;
+        document.getElementById("bun_shrimp_count").style.color = "white";
+      } else {
+        alert("Fehler beim Hinzufügen des Artikels");
+      }
+      console.log(summerrolls_count, springrolls_count, friedShrimp_count, edamame_count, pho_reg_count, pho_lg_count, bun_reg_count, bun_shrimp_count);
     }
 
 
-    document.getElementById("Gesamtsumme").innerHTML = sum;
-    document.getElementById("Anzahl").innerHTML = numberOfItems;
+    function reduceCount(product, price) {
+      selected_reduced = product;
+
+      if (selected_reduced === 1 && summerrolls_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        summerrolls_count--;
+        document.getElementById("summerrolls_count").innerHTML = summerrolls_count;
+        document.getElementById("summerrolls_count").style.color = "white";
+        document.getElementById("sum").innerHTML = sum.toFixed(2);
+        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
+      } else if (selected_reduced === 2 && springrolls_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        springrolls_count--;
+        document.getElementById("springrolls_count").innerHTML = springrolls_count;
+        document.getElementById("springrolls_count").style.color = "white";
+        document.getElementById("sum").innerHTML = sum.toFixed(2);
+        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
+      } else if (selected_reduced === 3 && friedShrimp_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        friedShrimp_count--;
+        document.getElementById("friedShrimp_count").innerHTML = friedShrimp_count;
+        document.getElementById("friedShrimp_count").style.color = "white";
+        document.getElementById("sum").innerHTML = sum.toFixed(2);
+        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
+      } else if (selected_reduced === 4 && edamame_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        edamame_count--;
+        document.getElementById("edamame_count").innerHTML = edamame_count;
+        document.getElementById("edamame_count").style.color = "white";
+        document.getElementById("sum").innerHTML = sum.toFixed(2);
+        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
+      } else if (selected_reduced === 5 && pho_reg_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        pho_reg_count--;
+        document.getElementById("pho_reg_count").innerHTML = pho_reg_count;
+        document.getElementById("pho_reg_count").style.color = "white";
+        document.getElementById("sum").innerHTML = sum.toFixed(2);
+        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
+      } else if (selected_reduced === 6 && pho_lg_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        pho_lg_count--;
+        document.getElementById("pho_lg_count").innerHTML = pho_lg_count;
+        document.getElementById("pho_lg_count").style.color = "white";
+        document.getElementById("sum").innerHTML = sum.toFixed(2);
+        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
+
+      } else if (selected_reduced === 7 && bun_reg_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        bun_reg_count--;
+        document.getElementById("bun_reg_count").innerHTML = bun_reg_count;
+        document.getElementById("bun_reg_count").style.color = "white";
+        document.getElementById("sum").innerHTML = sum.toFixed(2);
+        document.getElementById("Anzahl").innerHTML = numberOfItems;
+
+      } else if (selected_reduced === 8 && bun_shrimp_count > 0) {
+        sum = sum - price;
+        numberOfItems = numberOfItems - 1;
+        bun_shrimp_count--;
+        document.getElementById("bun_shrimp_count").innerHTML = bun_shrimp_count;
+        document.getElementById("bun_shrimp_count").style.color = "white";
+        document.getElementById("sum").innerHTML = sum.toFixed(2);
+        document.getElementById("Anzahl").innerHTML = numberOfItems;
+      } else {
+        alert("Fehler beim Entfernen des Artikels");
+      }
+      console.log(summerrolls_count, springrolls_count, friedShrimp_count, edamame_count, pho_reg_count, pho_lg_count, bun_reg_count, bun_shrimp_count);
+    }
+
+
+
+
+
+    function removeItem(price) {
+      sum = sum - price;
+      numberOfItems = numberOfItems - 1;
+      document.getElementById("sum").innerHTML = sum.toFixed(2);
+      document.getElementById("Anzahl").innerHTML = numberOfItems;
+    }
   </script>
 
 
