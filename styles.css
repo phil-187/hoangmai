@@ -11,13 +11,15 @@ h1 {
 
 .add-item {
   font-size: 5rem;
-  padding: 0 50px;
+  padding: 0 30px;
+
 }
 .reduce-item {
   font-size: 5rem;
   padding: 0 30px;
   z-index: 99;
 }
+
 .category {
   text-align: center;
 }
@@ -25,6 +27,16 @@ h1 {
   margin-left: 2%;
   margin-top: 1%;
   font-size:4rem;
+}
+
+.reset-column {
+  background-color: red;
+  color: white;
+}
+
+.reset-text {
+  font-size: 3.2rem;
+  margin: 2%;  
 }
 
 .total-item{
@@ -42,7 +54,7 @@ h1 {
 }
 
 .headerTotal {
-  background-color: #b4b4b4;
+  background-color: white;
   color: black;
   position:sticky;
   top:0;
@@ -52,6 +64,12 @@ h1 {
 .menu-item {
   font-size: 4rem;
 }
+
+.item-count {
+font-size: 4rem;
+text-align: center;
+color: black;
+}
 .item-row {
   padding:4% 2%;
   border-width: 1px;
@@ -59,9 +77,11 @@ h1 {
   border-color: white;
 
 }
+
 .right-col {
   text-align: right;
 }
+
 .total {
   text-align: right;
 }
