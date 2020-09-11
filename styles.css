@@ -122,9 +122,16 @@ color: black;
   margin-right: 10px;
 }
 
-.add-person-dropdown {
-  font-size: 5rem;
+.split-bill-dropdown {
+  font-size: 3rem;
+  margin: 50px 20px;
 }
+.split-bill-item {
+  font-size: 4rem;
+  text-align: center;
+  padding: 30px 200px;
+}
+
 
 
 .right-col {
