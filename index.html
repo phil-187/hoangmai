@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="utf-8" name="viewport" content="user-scalable=no">
+
+
   <title>Madame Pho</title>
 
   <!-- CSS Style sheets -->
@@ -545,6 +547,7 @@
                 numberOfItems = numberOfItems + 1;
                 document.getElementById("sum").innerHTML = sum.toFixed(2);
                 document.getElementById("Anzahl").innerHTML = numberOfItems;
+                splitbill(divideByNumber);
               }
 
 
@@ -947,6 +950,7 @@
                 }
                 document.getElementById("sum").innerHTML = sum.toFixed(2);
                 document.getElementById("Anzahl").innerHTML = numberOfItems;
+                splitbill(divideByNumber);
                 console.log(summerrolls_count, springrolls_count, friedShrimp_count, edamame_count, pho_reg_count, pho_lg_count, bun_reg_count, bun_shrimp_count, coff_beer_lemon_count, lemonade_special_count, softdrink_count, water_sm_count,
                   water_lg_count, longdrink_reg_count, longdrink_sm_count, wine_2_count, wine_1_count, wine_bottle_count, rose_bottle_count, ice_bottle_count, belvedere_bottle_count, tanqueray_bottle_count);
               }
